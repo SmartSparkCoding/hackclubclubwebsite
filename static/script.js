@@ -1,14 +1,74 @@
 const button = document.getElementById("learnButton");
 const joinButton = document.getElementById("joinButton");
 
-button.addEventListener("click", () => {
-    document.getElementById("about").scrollIntoView({
-        behavior: "smooth"
-    });
-});
+const goHome = document.getElementById("goHome");
+const goAbout = document.getElementById("goAbout");
+const goShowcase = document.getElementById("goShowcase");
+const goSocsGuide = document.getElementById("goSocsGuide");
 
-joinButton.addEventListener("click", () => {
-    document.getElementById("join").scrollIntoView({
-        behavior: "smooth"
+
+function fadeNavigate(url) {
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+        window.location.href = url;
+    }, 500);
+}
+
+
+if (button) {
+    button.addEventListener("click", () => {
+        document.getElementById("about").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+}
+
+
+if (joinButton) {
+    joinButton.addEventListener("click", () => {
+        fadeNavigate("/socsGuide");
+    });
+}
+
+
+if (goHome) {
+    goHome.addEventListener("click", () => {
+        fadeNavigate("/");
+    });
+}
+
+
+if (goAbout) {
+    goAbout.addEventListener("click", () => {
+        fadeNavigate("/about");
+    });
+}
+
+
+if (goShowcase) {
+    goShowcase.addEventListener("click", () => {
+        fadeNavigate("/showcase");
+    });
+}
+
+
+if (goSocsGuide) {
+    goSocsGuide.addEventListener("click", () => {
+        fadeNavigate("/socsGuide");
+    });
+}
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const url = link.href;
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 500);
     });
 });
