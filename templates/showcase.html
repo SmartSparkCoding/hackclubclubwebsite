@@ -7,33 +7,69 @@ Showcase - Hack Club
 
 {% block content %}
 
-<h2>Our Showcase</h2>
+<section class="showcase-header">
+    <h1>Our Showcase</h1>
+</section>
 
-<section id="projects" class="section alt">
-    <div class="container">
 
-        <h2>What We'll Build</h2>
+<section class="projects-section">
 
-        <div class="cards">
 
-            <div class="card">
-                <h3>Websites</h3>
-                <p>Create modern websites using HTML, CSS and JavaScript.</p>
-            </div>
+    <div class="section-heading">
 
-            <div class="card">
-                <h3>Python</h3>
-                <p>Learn programming by building useful applications.</p>
-            </div>
-
-            <div class="card">
-                <h3>Games</h3>
-                <p>Design simple games and interactive projects.</p>
-            </div>
-
-        </div>
+        <h2>
+            Imagine a world where
+            <span>you made this:</span>
+        </h2>
 
     </div>
+
+    <div class="carousel-wrapper">
+
+
+        <div class="fade fade-left"></div>
+
+        <div class="fade fade-right"></div>
+
+
+        <div 
+            class="carousel-track"
+            id="projectTrack">
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="controls">
+
+
+        <a 
+        class="magazine"
+        href="/socsGuide">
+            Join us →
+        </a>
+
+
+
+        <button id="pauseButton">
+            ⏸
+        </button>
+
+
+    </div>
+
+
+
 </section>
+
+
+
+<script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+<script src="{{ url_for('static', filename='js/showcase.js') }}"></script>
+
 
 {% endblock %}

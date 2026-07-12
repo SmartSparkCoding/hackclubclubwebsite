@@ -16,11 +16,9 @@ function fadeNavigate(url) {
 }
 
 
-if (button) {
-    button.addEventListener("click", () => {
-        document.getElementById("about").scrollIntoView({
-            behavior: "smooth"
-        });
+if (learnButton) {
+    learnButton.addEventListener("click", () => {
+        fadeNavigate("/about");
     });
 }
 
