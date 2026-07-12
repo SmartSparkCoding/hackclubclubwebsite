@@ -40,14 +40,24 @@ header p{
     opacity:.9;
 }
 
-nav{
-    background:#338eda;
-    border-bottom:1px solid #8492a6;
-    position:sticky;
-    top:0;
-    z-index:100;
+nav {
+    background: #338eda;
+    border-bottom: 1px solid #8492a6;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+nav .home-container {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
 
 nav .container{
     display:flex;
@@ -56,16 +66,15 @@ nav .container{
     padding:15px;
 }
 
-
-nav a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.2s ease;
 }
 
-
-nav a:hover{
-    color:#ff8c37;
+nav a:hover {
+    color: #ff8c37;
 }
 
 .hero{

@@ -1,13 +1,30 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Hack Club</title>
 
-{% block title %}
-Home - Hack Club
-{% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <div class="home-container">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/about">About</a>
+    <a class="nav-link" href="/showcase">Projects</a>
+    <a class="nav-link" href="/socsGuide">Join</a>
+</div>
+</nav>
 
 
-{% block content %}
-
-<section class="hero">
+<main>
+    <section class="hero">
     <div class="container">
         <h2>Welcome to Hack Club</h2>
 
@@ -36,5 +53,132 @@ Home - Hack Club
 
     </div>
 </section>
+</main>
 
-{% endblock %}
+
+<footer class="site-footer">
+
+
+    <img 
+    class="footer-illustration"
+    src="/static/assets/footer.webp"
+    alt="">
+
+
+
+    <div class="footer-container">
+
+
+
+        <div class="footer-brand">
+
+
+            <img 
+            class="footer-logo"
+            src="/static/assets/hackClubFlag.svg"
+            alt="Hack Club">
+
+
+
+            <p>
+                For teens, by teens.
+            </p>
+
+
+            <a href="tel:18556254225">
+                1-855-625-HACK (call toll-free)
+            </a>
+
+
+
+            <div class="socials">
+
+
+                <a href="https://github.com/hackclub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+
+                <a href="https://youtube.com/@ashfordschool">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+
+                <a href="https://instagram.com">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+                <a href="mailto:team@hackclub.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="footer-links">
+
+
+
+            <div>
+
+                <h3>Hack Club</h3>
+
+                <a href="https://hackclub.com/philosophy/">Philosophy</a>
+                <a href="https://hackclub.com/team/">Our Team & Board</a>
+                <a href="https://hackclub.com/jobs/">Jobs</a>
+                <a href="https://hackclub.com/branding/">Branding</a>
+                <a href="https://hackclub.com/press/">Press Inquiries</a>
+                <a href="https://hackclub.com/donate/">Donate</a>
+
+            </div>
+
+
+
+
+            <div>
+
+                <h3>This Club</h3>
+
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/showcase">Projects</a>
+                <a href="/socsGuide">Join</a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Ashford School Hack Club.
+            Built by students, for students.
+        </p>
+
+
+    </div>
+
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
