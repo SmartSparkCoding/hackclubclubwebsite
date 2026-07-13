@@ -2,7 +2,7 @@ const projects = [
     {
         name: "Jacob's Personal Website",
         person: "Jacob",
-        age: 13,
+        age: 14,
         country: "Year 9",
         image: "https://cdn.hackclub.com/019f56ab-b74c-7e88-8265-db3efed4a640/Screenshot%202026-07-12%20at%2015.11.34.png",
         play: "https://jacob.navaratne.uk",

@@ -4,14 +4,6 @@
     box-sizing:border-box;
 }
 
-
-.dm-sans-<uniquifier> {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
 body{
     font-family: "DM Sans", sans-serif;
     background:#f4f6f8;
@@ -19,6 +11,13 @@ body{
     line-height:1.6;
     opacity:1;
     transition:opacity 0.5s ease;
+}
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 
