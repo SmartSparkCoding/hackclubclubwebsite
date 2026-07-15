@@ -8,23 +8,25 @@ Finances - Hack Club
 {% block content %}
 
 <section class="finances">
-    <h1>{{ hcb.org_name }}</h1>
+    <div class="finances-header">
+        <h1>{{ hcb.org_name }}</h1>
 
-    {% if hcb.logo %}
-    <img src="{{ hcb.logo }}">
-    {% endif %}
+        {% if hcb.logo %}
+        <img src="{{ hcb.logo }}">
+        {% endif %}
+    </div>
 
-    <div class="card">
+    <div class="finances-card">
         <h2>Current Balance</h2>
         <h3>{{ hcb.balance_display }}</h3>
     </div>
 
-    <div class="card">
+    <div class="finances-card">
         <h2>Total Raised</h2>
         <h3>{{ hcb.total_raised_display }}</h3>
     </div>
 
-    <div class="card">
+    <div class="finances-card">
         <h2>Manager</h2>
         <h3>{{ hcb.manager_name }}</h3>
     </div>

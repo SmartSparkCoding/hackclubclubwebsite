@@ -840,6 +840,28 @@ body.fade-out{
     background: rgba(236, 55, 80, 0.25);
 }
 
+.finances {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+}
+
+.finances-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.finances img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* AHHHHHHHH */
+
 .footer-links {
 
     display:flex;
