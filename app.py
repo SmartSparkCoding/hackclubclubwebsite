@@ -1,4 +1,4 @@
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 from flask import Flask, json, render_template
 
@@ -26,10 +26,11 @@ def about():
 
 @app.route('/finances')
 def finances():
-    return render_template('hcb.html')
+    hcb = getHCBData()
+    return render_template("hcb.html", hcb=hcb)
 
 def getHCBData():
-    slug = os.getenv("HCB_ORG_SLUG", "ashford-school-hack-club")
+    slug = "ashford-school-hack-club"
     url = f"https://hcb.hackclub.com/api/v3/organizations/{slug}"
 
     fallback = {
@@ -116,3 +117,5 @@ def getHCBData():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=7600, debug=True)
+
+

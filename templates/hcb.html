@@ -7,6 +7,31 @@ Finances - Hack Club
 
 {% block content %}
 
+<section class="finances">
+    <h1>{{ hcb.org_name }}</h1>
 
+    {% if hcb.logo %}
+    <img src="{{ hcb.logo }}">
+    {% endif %}
+
+    <div class="card">
+        <h2>Current Balance</h2>
+        <h3>{{ hcb.balance_display }}</h3>
+    </div>
+
+    <div class="card">
+        <h2>Total Raised</h2>
+        <h3>{{ hcb.total_raised_display }}</h3>
+    </div>
+
+    <div class="card">
+        <h2>Manager</h2>
+        <h3>{{ hcb.manager_name }}</h3>
+    </div>
+
+    <a href="{{ hcb.hcb_url }}">
+        View on HCB
+    </a>
+</section>
 
 {% endblock %}
