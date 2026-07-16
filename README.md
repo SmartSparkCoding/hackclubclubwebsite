@@ -1,3 +1,4 @@
+<h1 align="center">ASHFORD SCHOOL HACK CLUB WEBSITE</h1>
 <h3 align="center">A Static Website, Based on Flask for my Hack Club!</h3>
 <p align="center">Created by Jacob Navaratne</p>
 
