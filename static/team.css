@@ -1,0 +1,79 @@
+.leadership {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 20px;
+}
+
+.leader-card {
+    width: 330px;
+    text-align: center; 
+    padding: 35px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 1px solid rgba(236, 55, 80, 1);
+    transition: 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.leader-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+.leader-card h2 {
+    margin-bottom: 8px;
+}
+
+.leader-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #ec3750;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.leader-card p {
+    margin-top: 20px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.leader-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.leader-links a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid #ec3750;
+    background: rgba(236, 55, 80, 0.1);
+    transition: 0.2s;
+}
+
+.leader-links a:hover {
+    background: rgba(236, 55, 80, 0.25);
+}
+
+.leadership-info {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 20px;
+}
