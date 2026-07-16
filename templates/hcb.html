@@ -25,32 +25,85 @@
 </nav>
 
 <section class="finances">
+
     <div class="finances-header">
-        <h1>{{ hcb.org_name }}</h1>
 
         {% if hcb.logo %}
         <img src="{{ hcb.logo }}">
         {% endif %}
+
+        <div>
+            <h1>{{ hcb.org_name }}</h1>
+            <p>{{ hcb.org_slug }}</p>
+
+            <a class="hcb-button" href="{{ hcb.hcb_url }}" target="_blank">
+                View on HCB
+            </a>
+        </div>
+
     </div>
 
-    <div class="finances-card">
-        <h2>Current Balance</h2>
-        <h3>{{ hcb.balance_display }}</h3>
+    <div class="stats-grid">
+
+        <div class="finances-card">
+            <span>Current Balance</span>
+            <h2>{{ hcb.balance_display }}</h2>
+        </div>
+
+        <div class="finances-card">
+            <span>Total Raised</span>
+            <h2>{{ hcb.total_raised_display }}</h2>
+        </div>
+
+        <div class="finances-card">
+            <span>Incoming</span>
+            <h2>${{ "%.2f"|format(hcb.incoming_balance_cents/100) }}</h2>
+        </div>
+
+        <div class="finances-card">
+            <span>Fees</span>
+            <h2>${{ "%.2f"|format(hcb.fee_balance_cents/100) }}</h2>
+        </div>
+
     </div>
 
-    <div class="finances-card">
-        <h2>Total Raised</h2>
-        <h3>{{ hcb.total_raised_display }}</h3>
+    <div class="graph-card">
+
+        <h2>Fund Breakdown</h2>
+
+        <canvas id="financeChart"></canvas>
+
     </div>
 
-    <div class="finances-card">
-        <h2>Manager</h2>
-        <h3>{{ hcb.manager_name }}</h3>
+    <div class="info-card">
+
+        <h2>Organisation</h2>
+
+        <table>
+
+            <tr>
+                <td>Manager</td>
+                <td>{{ hcb.manager_name }}</td>
+            </tr>
+
+            <tr>
+                <td>Slug</td>
+                <td>{{ hcb.org_slug }}</td>
+            </tr>
+
+            <tr>
+                <td>Website</td>
+                <td>
+                    <a href="{{ hcb.website }}">
+                        {{ hcb.website }}
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+
     </div>
 
-    <a href="{{ hcb.hcb_url }}">
-        View on HCB
-    </a>
 </section>
 
 <footer class="site-footer">
@@ -175,6 +228,42 @@
 </footer>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('financeChart');
+
+new Chart(ctx,{
+
+    type:'doughnut',
+
+    data:{
+
+        labels:[
+            "Balance",
+            "Incoming",
+            "Fees"
+        ],
+
+        datasets:[{
+
+            data:[
+                {{ hcb.balance_cents }},
+                {{ hcb.incoming_balance_cents }},
+                {{ hcb.fee_balance_cents }}
+            ],
+
+            backgroundColor:[
+                "#ec3750",
+                "#33d6a6",
+                "#ff8c37"
+            ]
+
+        }]
+
+    }
+
+});
+</script>
 
 
 </body>

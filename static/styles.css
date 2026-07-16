@@ -840,35 +840,156 @@ body.fade-out{
     background: rgba(236, 55, 80, 0.25);
 }
 
-.finances {
-    display: grid;
-    justify-content: center;
-    padding: 60px 20px;
-    gap: 40px;
+.finances{
+
+    max-width:1300px;
+    margin:auto;
+
+    padding:70px 25px;
+
 }
 
-.finances-header {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+.finances-header{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:60px;
+
 }
 
-.finances img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 20px;
-    margin-top: 20px;
+.finances-header img{
+
+    width:120px;
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+
 }
 
-.finances-card {
-    width: 100vh;
-    text-align: center; 
-    padding: 35px;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 1px solid rgba(236, 55, 80, 1);
-    transition: 0.3s ease;
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.finances-card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    border:1px solid rgba(236,55,80,.5);
+
+    transition:.25s;
+
+}
+
+.finances-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ec3750;
+
+    box-shadow:0 15px 35px rgba(236,55,80,.25);
+
+}
+
+.finances-card span{
+
+    opacity:.7;
+
+    font-size:.9rem;
+
+}
+
+.finances-card h2{
+
+    font-size:2.2rem;
+
+    margin-top:10px;
+
+}
+
+.graph-card{
+
+    margin-top:40px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(236,55,80,.5);
+
+}
+
+.info-card{
+
+    margin-top:40px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:25px;
+
+    padding:35px;
+
+}
+
+.info-card table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.info-card td{
+
+    padding:15px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.hcb-button{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#ec3750;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.hcb-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#ff5b71;
+
 }
 
 /* AHHHHHHHH */
