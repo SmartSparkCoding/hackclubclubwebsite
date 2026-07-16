@@ -1,1 +1,5 @@
-flask
+Flask
+Flask-Caching
+Flask-Compress
+requests
+gunicorn

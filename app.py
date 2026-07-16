@@ -1,8 +1,19 @@
 from urllib.request import Request, urlopen
-
 from flask import Flask, json, render_template
+from flask_caching import Cache
+from datetime import timedelta
 
 app = Flask(__name__)
+
+cache = Cache(app, config={
+
+    "CACHE_TYPE": "SimpleCache",
+
+    "CACHE_DEFAULT_TIMEOUT": 350
+
+})
+
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(days=365)
 
 @app.route('/')
 def home():
@@ -29,6 +40,7 @@ def finances():
     hcb = getHCBData()
     return render_template("hcb.html", hcb=hcb)
 
+@cache.cached(timeout=350)
 def getHCBData():
     slug = "ashford-school-hack-club"
     url = f"https://hcb.hackclub.com/api/v3/organizations/{slug}"
@@ -116,6 +128,6 @@ def getHCBData():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7600, debug=True)
+    app.run(host='0.0.0.0', port=7600, debug=False)
 
 
