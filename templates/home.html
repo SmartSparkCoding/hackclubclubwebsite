@@ -25,39 +25,107 @@
     </div>
 </nav>
 
-
 <main>
-    <section class="hero">
-    <div class="container">
-        <h2>Welcome to Hack Club</h2>
+    <section class="home-hero">
+        <div class="hero-grid"></div>
 
-        <p>
-            Welcome to the Club! We are a group of students part of a larger community of Hack Clubs! We make everything from websites to games, beginner or <strong>advanced</strong>. Learn More below!
-        </p>
+        <div class="hero-content">
+            <span class="hero-tag">ASHFORD SCHOOL HACK CLUB</span>
 
-        <button id="learnButton">Learn More</button>
-        <button id="joinButton">Join Us</button>
-    </div>
-</section>
+            <h1 class="hero-title reveal">Build.
+                <span>Create.</span>
+                Inspire.
+            </h1>
 
-<section id="join" class="section">
-    <div class="container">
+            <p class="hero-description reveal">
+                Join a community of students building websites, games,
+                AI projects and everything in between. Whether you've
+                never written a line of code or you've already built your
+                own apps, there's a place for you here.
+            </p>
 
-        <h2>Interested?</h2>
+            <div class="hero-buttons reveal">
+                <a href="/socsGuide" class="hero-button primary">Join Us</a>
+                <a href="/showcase" class="hero-button secondary">View Projects</a> 
+            </div>
+        </div>
 
-        <p>
-            Come along, meet new people and start building something amazing.
-            No previous experience required.
-        </p>
+        <div class="scroll-indicator"><span></span></div>
+    </section>
 
-        <br>
+    <section class="stats-section">
+        <div class="section-heading reveal">
+            <h2>What we've achieved</h2>
+            <p>Our members build incredible things every week.</p>
+        </div>
 
-        <button id="joinButton">Join Us</button>
+        <div class="stats-grid">
+            <div class="stat-card reveal">
+                <h3 id="members-count">0</h3>
+                <p>Members</p>
+            </div>
+            <div class="stat-card reveal">
+                <h3 id="projects-count">0</h3>
+                <p>Projects</p>
+            </div>
+            <div class="stat-card reveal">
+                <h3 id="raised-count">£0</h3>
+                <p>Raised</p>
+            </div>
+            <div class="stat-card reveal">
+                <h3 id="events-count">0</h3>
+                <p>Events</p>
+            </div>
+        </div>
+    </section>
 
-    </div>
-</section>
+    <section class="join-section">
+        <div class="join-content reveal">
+            <span class="hero-tag">WHY JOIN?</span>
+            <h2>Learn - Build - <span>Together</span></h2>
+            <p>Hack Club isn't another classroom. It's a place where students create things they're proud of, collaborate with friends and discover new technologies.</p>
+        </div>
+
+        <div class="reasons-grid">
+            <div class="reason-card reveal">
+                <i class="fa-solid fa-code"></i>
+                <h3>Learn to Code</h3>
+                <p>From HTML to Python to AI.</p>
+            </div>
+
+            <div class="reason-card reveal">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Build Projects</h3>
+                <p>Turn your ideas into real apps.</p>
+            </div>
+
+            <div class="reason-card reveal">
+                <i class="fa-solid fa-users"></i>
+                <h3>Meet Friends</h3>
+                <p>Work alongside other creators, like you.</p>
+            </div>
+
+            <div class="reason-card reveal">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Launch Ideas</h3>
+                <p>Build something you're proud of.</p>
+            </div>
+
+            <div class="reason-card reveal">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Have Fun</h3>
+                <p>Coding is better, with friends.</p>
+            </div>
+        </div>
+
+        <div class="join-cta reveal">
+            <h2>Ready to build something amazing?</h2>
+            <p>No experience required — just curiosity.</p>
+            <br>
+            <a href="/socsGuide" class="hero-button primary">Join Hack Club</a>
+        </div>
+    </section>
 </main>
-
 
 <footer class="site-footer">
 
@@ -181,7 +249,7 @@
 </footer>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
 
 </body>
 </html>
